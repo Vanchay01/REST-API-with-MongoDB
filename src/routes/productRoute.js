@@ -28,7 +28,7 @@ const {
  *                example: ""
  *              description:
  *                type: string
- *                example: Haha Bro, u got me
+ *                example: description of product
  *              price:
  *                type: number
  *                example: 18

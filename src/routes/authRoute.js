@@ -22,7 +22,7 @@ const { handleValidation } = require("../middleware/middleware");
  *             properties:
  *               email:
  *                  type: string
- *                  example: cheawon@gmail.com
+ *                  example: vanchay@gmail.com
  *               password:
  *                  type: string
  *                  example: Chay1537
@@ -47,10 +47,10 @@ authRouter.post("/login", loginSchema, handleValidation, loginUser);
  *                      properties:
  *                          username:
  *                              type: string
- *                              example: cheawon
+ *                              example: vanchay
  *                          email:
  *                              type: string
- *                              example: cheawon@gmail.com
+ *                              example: vanchay@gmail.com
  *                          age:
  *                              type: number
  *                              example: 21
