@@ -1,14 +1,12 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-const dbHost = process.env.DB_HOST;
-const dbName = process.env.DB_NAME;
-
 async function dbconnect() {
-  mongoose.connection.on("connected", () => {
-    console.log("Connected:", dbName, `✅✅`);
-  });
-  await mongoose.connect(`mongodb://${dbHost}${dbName}`);
+  try {
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log("MongoDB Connected ✅ - db.js:7");
+  } catch (error) {
+    console.log(error.message);
+  }
 }
-
 module.exports = dbconnect;

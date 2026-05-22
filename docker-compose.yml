@@ -1,0 +1,18 @@
+version: '2'
+services:
+  back-end:
+    build: .
+    container_name: back-end
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27020:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
